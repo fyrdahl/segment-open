@@ -100,6 +100,7 @@ if exist(filename,'file')
 
 end;
 
+if ~strfind(mexext(),'mexmaci')
 %Select OpenGL according to preferences
 if DATA.Pref.OpenGLSoftware
   opengl software;
@@ -108,6 +109,8 @@ else
 end;
 disp('OpenGL info:');
 opengl info;
+end
+    
 
 %---------------------------
 function preferencesbackward
